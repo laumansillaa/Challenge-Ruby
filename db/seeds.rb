@@ -11,20 +11,20 @@
 # validates :nombre, presence: true
 # validates :apellido, presence: truename
 
-User.create({
-    name: "Lautaro",
-    age: "25 años",
+Character.create({
+    name: "Pedro",
+    age: "56 años",
     weigth: "63",
-    resume: "Soy un intento de developer",
+    resume: "soy Meterologo",
     movies: "ninguna"
 
 })
 
-User.create({
+Character.create({
     name: "Juan",
     age: "28 años",
     weigth: "73",
-    resume: "Soy un puto developer",
+    resume: "no tengo profesion",
     movies: "ninguna"
 
 })

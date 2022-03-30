@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class Character < ApplicationRecord
     #AGREGAMOS LAS VALIDACIONES
     validates :image, presence: false
     validates :name, presence: true
