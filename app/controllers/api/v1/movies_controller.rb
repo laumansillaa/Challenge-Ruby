@@ -1,6 +1,7 @@
 module Api
     module V1
         class MoviesController < ApplicationController
+            before_action :authenticate_user!, except: [:index, :show]
             def index 
                all_movies = Movie.order('created_at')
                

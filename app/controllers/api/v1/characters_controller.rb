@@ -3,6 +3,7 @@ module  Api
     module V1 
         #El nombre del controlador debe ser en plural y la clase se debe llamar igual que el controlador
         class CharactersController < ApplicationController
+            before_action :authenticate_user!, except: [:index, :show]
             #Trae todos los resultados ordenados por created_at
             def index 
                 all_characters = Character.order('created_at')
