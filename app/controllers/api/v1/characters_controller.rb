@@ -37,7 +37,7 @@ module  Api
                     render json: {
                         status: 'FAILED',
                         MESSAGE: 'Fallo la peticion',
-                        data: user.errors
+                        data: character.errors
                         }, status: :unprocessable_entity
                 end
                     
@@ -54,9 +54,8 @@ module  Api
                     }, status: :ok
                     else 
                         render json: {
-                            status: 'SUCCESS',
-                            MESSAGE: 'Hubo un error en la actualizacion',
-                            data: update_character.erros
+                            status: 'FAILED',
+                            MESSAGE: 'Hubo un error en la actualizacion'                            
                         }, status: :unprocessable_entity
                 end
 
@@ -73,7 +72,7 @@ module  Api
                     }, status: :ok
                     else 
                         render json: {
-                            status: 'SUCCESS',
+                            status: 'FAILED',
                             message: 'Hubo un error al eliminar el registro'
                         }
                 end 
